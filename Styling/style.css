@@ -1,11 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColor: #65285a;
+  --textColor: #a9e4ef;
+  --accentColor: #96f550;
+}
+
 body {
-  background-color: rgb(99, 255, 91);
+  background-color: var(--bgColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 60dvw;
+  margin: auto;
 }
 
 header {
@@ -15,6 +29,9 @@ header {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   border-bottom: 1px solid black;
 }
 
@@ -46,4 +63,18 @@ h3 {
 
 .max {
   max-width: 60dvw;
+}
+
+.row {
+  display: flex;
+}
+
+.row img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.row section {
+  flex: 1;
 }
